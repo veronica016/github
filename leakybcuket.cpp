@@ -786,34 +786,21 @@ glColor3f(0.5,0.0,0.7);
 		glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24,tby[i]);
 
 	glColor3f(0.7,0.0,0.3);
-	char t[]="G Srividya";
-	glRasterPos2f(200.0,250.0);
-	for(i=0;t[i]!='\0';i++)
-		glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24,t[i]);
+	
 
 	glColor3f(0.7,0.0,0.3);
-	char s[]="1CD18CS039";
-	glRasterPos2f(270.0,250.0);
-	for(i=0;s[i]!='\0';i++)
-		glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24,s[i]);
-
-	glColor3f(0.7,0.0,0.3);
-	char u[]="M R Navaneetha";
+	char u[]="Veronica";
 	glRasterPos2f(200.0,230.0);
 	for(i=0;u[i]!='\0';i++)
 		glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24,u[i]);
 
-	glColor3f(0.7,0.0,0.3);
-	char v[]="1CD19CS404";
-	glRasterPos2f(270.0,230.0);
-	for(i=0;v[i]!='\0';i++)
-		glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24,v[i]);
+	
 
 }
 
 
 void demo_menu(int id)
-{
+{C
 	//op=id;
 	switch(id)	
 	{
@@ -848,7 +835,7 @@ void main(int argc,char **argv)
 	glutInit(&argc,argv);
 	glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
 	glutInitWindowSize(500,500);
-	glutInitWindowPosition(0,0);
+	glutInitWindowPosition(10,10);
 	glutCreateWindow("Leaky Bucket");
 	glutCreateMenu(demo_menu);
 	glutAddMenuEntry("Algorithm",1);
@@ -857,7 +844,8 @@ void main(int argc,char **argv)
 	glutAddMenuEntry("Exit",4);
 	glutAttachMenu(GLUT_RIGHT_BUTTON);
 	glutDisplayFunc(display);
-	glClearColor(0.0,0.0,0.0,0.0);
+	glClearColor(1.0,1.0,1.0,1.0);
 	myinit();
 	glutMainLoop();
+	glFlush();
 }
